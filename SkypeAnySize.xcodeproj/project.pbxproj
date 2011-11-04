@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0917214214647E6C00AAA3FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0917214114647E6B00AAA3FE /* Cocoa.framework */; };
 		0917214C14647E6C00AAA3FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0917214A14647E6C00AAA3FE /* InfoPlist.strings */; };
+		0917215514647EBA00AAA3FE /* SCGSkypeAnySize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0917215414647EBA00AAA3FE /* SCGSkypeAnySize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,9 +18,11 @@
 		0917214414647E6C00AAA3FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0917214514647E6C00AAA3FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0917214614647E6C00AAA3FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0917214914647E6C00AAA3FE /* SkypeAnySize-Info.plist */ = {isa = PBXFileReference; path = "SkypeAnySize-Info.plist"; sourceTree = "<group>"; };
+		0917214914647E6C00AAA3FE /* SkypeAnySize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SkypeAnySize-Info.plist"; sourceTree = "<group>"; };
 		0917214B14647E6C00AAA3FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0917214D14647E6C00AAA3FE /* SkypeAnySize-Prefix.pch */ = {isa = PBXFileReference; path = "SkypeAnySize-Prefix.pch"; sourceTree = "<group>"; };
+		0917214D14647E6C00AAA3FE /* SkypeAnySize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkypeAnySize-Prefix.pch"; sourceTree = "<group>"; };
+		0917215314647EBA00AAA3FE /* SCGSkypeAnySize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGSkypeAnySize.h; sourceTree = "<group>"; };
+		0917215414647EBA00AAA3FE /* SCGSkypeAnySize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGSkypeAnySize.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				0917214814647E6C00AAA3FE /* Supporting Files */,
+				0917215314647EBA00AAA3FE /* SCGSkypeAnySize.h */,
+				0917215414647EBA00AAA3FE /* SCGSkypeAnySize.m */,
 			);
 			path = SkypeAnySize;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0917215514647EBA00AAA3FE /* SCGSkypeAnySize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,10 +221,12 @@
 		0917215114647E6C00AAA3FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SkypeAnySize/SkypeAnySize-Prefix.pch";
 				INFOPLIST_FILE = "SkypeAnySize/SkypeAnySize-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -227,6 +235,7 @@
 		0917215214647E6C00AAA3FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SkypeAnySize/SkypeAnySize-Prefix.pch";
 				INFOPLIST_FILE = "SkypeAnySize/SkypeAnySize-Info.plist";
